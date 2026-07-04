@@ -1,0 +1,289 @@
+team_code,team_name,player_name,position,role,expected_minutes,starting_probability,goals_per_90,shots_per_90,xg_per_90,penalty_taker,set_piece_taker,aerial_threat,creative_threat,mvp_rating_base
+ARG,Argentina,Lionel Messi,FW,Primary creator,84,0.94,0.62,3.5,0.54,true,true,false,true,94
+ARG,Argentina,Lautaro Martinez,FW,Primary scorer,72,0.78,0.55,3.2,0.50,false,false,true,false,87
+ARG,Argentina,Julian Alvarez,FW,Pressing forward,76,0.82,0.48,2.8,0.44,false,false,true,true,86
+ARG,Argentina,Enzo Fernandez,MF,Progressive midfielder,82,0.88,0.12,1.4,0.10,false,false,false,true,84
+ARG,Argentina,Alexis Mac Allister,MF,Creative midfielder,80,0.86,0.18,1.7,0.14,false,true,false,true,84
+ARG,Argentina,Rodrigo De Paul,MF,Ball-winning midfielder,78,0.84,0.08,1.2,0.07,false,false,false,true,82
+ARG,Argentina,Cristian Romero,DF,Defensive leader,88,0.92,0.06,0.7,0.05,false,false,true,false,84
+ARG,Argentina,Emiliano Martinez,GK,Goalkeeper,90,0.96,0.00,0.0,0.00,false,false,false,false,86
+POR,Portugal,Cristiano Ronaldo,FW,Primary scorer,68,0.66,0.58,3.7,0.54,true,false,true,false,86
+POR,Portugal,Bruno Fernandes,MF,Primary creator,86,0.94,0.33,2.7,0.30,true,true,false,true,88
+POR,Portugal,Bernardo Silva,MF,Creative midfielder,82,0.90,0.22,1.9,0.18,false,false,false,true,87
+POR,Portugal,Rafael Leao,FW,Wide forward,70,0.74,0.42,2.8,0.36,false,false,false,true,85
+POR,Portugal,Joao Felix,FW,Second striker,62,0.58,0.34,2.3,0.28,false,false,false,true,82
+POR,Portugal,Vitinha,MF,Progressive midfielder,78,0.84,0.10,1.1,0.08,false,false,false,true,84
+POR,Portugal,Ruben Dias,DF,Defensive leader,90,0.95,0.07,0.8,0.06,false,false,true,false,87
+POR,Portugal,Diogo Costa,GK,Goalkeeper,90,0.95,0.00,0.0,0.00,false,false,false,false,84
+FRA,France,Kylian Mbappe,FW,Primary scorer,88,0.97,0.72,4.1,0.68,true,false,false,true,94
+FRA,France,Antoine Griezmann,MF,Primary creator,82,0.90,0.25,1.8,0.21,false,true,false,true,87
+FRA,France,Ousmane Dembele,FW,Wide creator,72,0.74,0.28,2.4,0.25,false,false,false,true,84
+FRA,France,Marcus Thuram,FW,Power forward,66,0.64,0.41,2.5,0.38,false,false,true,false,83
+FRA,France,Eduardo Camavinga,MF,Progressive midfielder,70,0.68,0.08,1.0,0.07,false,false,false,true,83
+FRA,France,Aurelien Tchouameni,MF,Holding midfielder,82,0.88,0.09,1.1,0.08,false,false,true,false,85
+FRA,France,William Saliba,DF,Defensive leader,88,0.92,0.04,0.5,0.04,false,false,true,false,86
+FRA,France,Mike Maignan,GK,Goalkeeper,90,0.95,0.00,0.0,0.00,false,false,false,false,86
+NED,Netherlands,Cody Gakpo,FW,Primary scorer,80,0.88,0.44,2.6,0.37,false,false,true,true,84
+NED,Netherlands,Memphis Depay,FW,Penalty forward,68,0.70,0.48,3.1,0.43,true,true,false,true,83
+NED,Netherlands,Xavi Simons,MF,Creative midfielder,74,0.78,0.26,2.1,0.22,false,false,false,true,82
+NED,Netherlands,Frenkie de Jong,MF,Progressive midfielder,82,0.84,0.08,0.9,0.06,false,false,false,true,86
+NED,Netherlands,Tijjani Reijnders,MF,Box-to-box midfielder,76,0.78,0.14,1.5,0.11,false,false,false,true,82
+NED,Netherlands,Virgil van Dijk,DF,Defensive leader,90,0.96,0.10,0.9,0.11,false,false,true,false,88
+NED,Netherlands,Matthijs de Ligt,DF,Central defender,76,0.70,0.08,0.7,0.07,false,false,true,false,84
+NED,Netherlands,Bart Verbruggen,GK,Goalkeeper,90,0.86,0.00,0.0,0.00,false,false,false,false,80
+ENG,England,Harry Kane,FW,Primary scorer,86,0.96,0.64,3.2,0.58,true,false,true,true,91
+ENG,England,Jude Bellingham,MF,Attacking midfielder,86,0.94,0.34,2.3,0.28,false,false,true,true,90
+ENG,England,Bukayo Saka,FW,Wide forward,80,0.90,0.38,2.7,0.34,false,false,false,true,88
+ENG,England,Phil Foden,FW,Creative forward,74,0.78,0.31,2.5,0.26,false,false,false,true,87
+ENG,England,Declan Rice,MF,Holding midfielder,88,0.94,0.08,1.0,0.06,false,false,true,false,87
+ENG,England,Cole Palmer,MF,Creative midfielder,64,0.58,0.42,2.6,0.36,true,true,false,true,85
+ENG,England,John Stones,DF,Ball-playing defender,82,0.82,0.05,0.5,0.04,false,false,true,true,84
+ENG,England,Jordan Pickford,GK,Goalkeeper,90,0.92,0.00,0.0,0.00,false,false,false,false,82
+BRA,Brazil,Vinicius Junior,FW,Primary scorer,84,0.94,0.49,3.1,0.43,false,false,false,true,91
+BRA,Brazil,Rodrygo,FW,Wide forward,78,0.84,0.37,2.8,0.32,false,false,false,true,86
+BRA,Brazil,Raphinha,FW,Wide creator,74,0.76,0.34,2.6,0.30,false,true,false,true,84
+BRA,Brazil,Neymar,MF,Primary creator,64,0.58,0.44,2.6,0.39,true,true,false,true,88
+BRA,Brazil,Bruno Guimaraes,MF,Progressive midfielder,82,0.88,0.12,1.3,0.10,false,false,false,true,85
+BRA,Brazil,Lucas Paqueta,MF,Creative midfielder,76,0.78,0.18,1.8,0.15,false,false,false,true,83
+BRA,Brazil,Marquinhos,DF,Defensive leader,88,0.90,0.06,0.6,0.05,false,false,true,false,85
+BRA,Brazil,Alisson,GK,Goalkeeper,90,0.94,0.00,0.0,0.00,false,false,false,false,88
+ESP,Spain,Lamine Yamal,FW,Wide creator,72,0.76,0.30,2.4,0.25,false,false,false,true,86
+ESP,Spain,Pedri,MF,Creative midfielder,78,0.82,0.12,1.2,0.09,false,false,false,true,87
+ESP,Spain,Nico Williams,FW,Wide forward,74,0.78,0.28,2.1,0.24,false,false,false,true,84
+ESP,Spain,Alvaro Morata,FW,Primary scorer,72,0.74,0.50,2.8,0.46,false,false,true,false,83
+ESP,Spain,Dani Olmo,MF,Attacking midfielder,76,0.78,0.32,2.3,0.29,false,false,false,true,84
+ESP,Spain,Rodri,MF,Holding midfielder,88,0.96,0.12,1.1,0.09,false,false,true,true,91
+ESP,Spain,Dani Carvajal,DF,Full-back,82,0.84,0.07,0.7,0.05,false,false,false,true,84
+ESP,Spain,Unai Simon,GK,Goalkeeper,90,0.90,0.00,0.0,0.00,false,false,false,false,82
+MAR,Morocco,Achraf Hakimi,DF,Attacking full-back,90,0.96,0.12,1.2,0.10,false,false,false,true,86
+MAR,Morocco,Hakim Ziyech,FW,Set-piece creator,74,0.80,0.30,2.2,0.25,true,true,false,true,83
+MAR,Morocco,Youssef En-Nesyri,FW,Primary scorer,80,0.86,0.43,2.5,0.39,false,false,true,false,82
+MAR,Morocco,Sofyan Amrabat,MF,Holding midfielder,84,0.90,0.05,0.7,0.04,false,false,false,false,81
+MAR,Morocco,Brahim Diaz,MF,Creative midfielder,76,0.78,0.24,2.0,0.20,false,false,false,true,84
+MAR,Morocco,Noussair Mazraoui,DF,Full-back,82,0.84,0.06,0.6,0.05,false,false,false,true,81
+MAR,Morocco,Nayef Aguerd,DF,Central defender,82,0.82,0.06,0.6,0.05,false,false,true,false,80
+MAR,Morocco,Yassine Bounou,GK,Goalkeeper,90,0.94,0.00,0.0,0.00,false,false,false,false,84
+GER,Germany,Jamal Musiala,MF,Creative midfielder,82,0.90,0.30,2.5,0.26,false,false,false,true,89
+GER,Germany,Florian Wirtz,MF,Primary creator,80,0.86,0.28,2.2,0.23,false,true,false,true,88
+GER,Germany,Kai Havertz,FW,Primary scorer,78,0.80,0.38,2.7,0.34,true,false,true,true,85
+GER,Germany,Leroy Sane,FW,Wide forward,72,0.72,0.34,2.8,0.29,false,false,false,true,84
+GER,Germany,Joshua Kimmich,MF,Set-piece midfielder,84,0.88,0.08,1.1,0.07,false,true,false,true,86
+GER,Germany,Ilkay Gundogan,MF,Creative midfielder,76,0.76,0.18,1.6,0.14,true,false,false,true,84
+GER,Germany,Antonio Rudiger,DF,Defensive leader,88,0.92,0.05,0.6,0.04,false,false,true,false,86
+GER,Germany,Manuel Neuer,GK,Goalkeeper,86,0.84,0.00,0.0,0.00,false,false,false,false,84
+ITA,Italy,Federico Chiesa,FW,Wide forward,76,0.78,0.32,2.5,0.27,false,false,false,true,84
+ITA,Italy,Nicolo Barella,MF,Box-to-box midfielder,84,0.92,0.14,1.5,0.11,false,false,false,true,86
+ITA,Italy,Alessandro Bastoni,DF,Ball-playing defender,86,0.92,0.05,0.5,0.04,false,false,true,true,86
+ITA,Italy,Gianluigi Donnarumma,GK,Goalkeeper,90,0.96,0.00,0.0,0.00,false,false,false,false,87
+ITA,Italy,Gianluca Scamacca,FW,Primary scorer,72,0.72,0.42,2.8,0.38,false,false,true,false,81
+ITA,Italy,Federico Dimarco,DF,Set-piece full-back,80,0.84,0.10,1.2,0.08,false,true,false,true,83
+ITA,Italy,Sandro Tonali,MF,Progressive midfielder,78,0.76,0.08,1.0,0.06,false,true,false,true,83
+ITA,Italy,Davide Frattesi,MF,Box-crashing midfielder,68,0.62,0.26,1.9,0.21,false,false,false,true,80
+BEL,Belgium,Kevin De Bruyne,MF,Primary creator,82,0.88,0.24,2.2,0.20,false,true,false,true,90
+BEL,Belgium,Romelu Lukaku,FW,Primary scorer,80,0.86,0.62,3.3,0.57,true,false,true,false,86
+BEL,Belgium,Jeremy Doku,FW,Wide creator,72,0.72,0.25,2.0,0.21,false,false,false,true,83
+BEL,Belgium,Leandro Trossard,FW,Wide forward,68,0.66,0.34,2.3,0.28,false,false,false,true,83
+BEL,Belgium,Youri Tielemans,MF,Progressive midfielder,74,0.74,0.14,1.4,0.11,false,true,false,true,82
+BEL,Belgium,Amadou Onana,MF,Holding midfielder,80,0.82,0.08,0.9,0.06,false,false,true,false,82
+BEL,Belgium,Jan Vertonghen,DF,Defensive leader,76,0.70,0.04,0.4,0.03,false,false,true,false,80
+BEL,Belgium,Koen Casteels,GK,Goalkeeper,90,0.84,0.00,0.0,0.00,false,false,false,false,81
+CRO,Croatia,Luka Modric,MF,Primary creator,78,0.82,0.10,1.0,0.08,false,true,false,true,87
+CRO,Croatia,Mateo Kovacic,MF,Progressive midfielder,80,0.84,0.08,0.9,0.06,false,false,false,true,84
+CRO,Croatia,Marcelo Brozovic,MF,Holding midfielder,78,0.78,0.06,0.7,0.05,false,false,false,true,82
+CRO,Croatia,Andrej Kramaric,FW,Primary scorer,72,0.74,0.38,2.3,0.33,true,false,false,true,82
+CRO,Croatia,Josko Gvardiol,DF,Defensive leader,88,0.94,0.08,0.8,0.06,false,false,true,true,87
+CRO,Croatia,Ivan Perisic,FW,Wide creator,64,0.56,0.20,1.8,0.16,false,true,true,true,80
+CRO,Croatia,Bruno Petkovic,FW,Target forward,58,0.46,0.30,2.0,0.25,false,false,true,false,78
+CRO,Croatia,Dominik Livakovic,GK,Goalkeeper,90,0.90,0.00,0.0,0.00,false,false,false,false,82
+URU,Uruguay,Darwin Nunez,FW,Primary scorer,82,0.88,0.54,3.6,0.50,false,false,true,false,86
+URU,Uruguay,Federico Valverde,MF,Box-to-box midfielder,88,0.96,0.16,1.8,0.13,false,false,false,true,88
+URU,Uruguay,Ronald Araujo,DF,Defensive leader,86,0.88,0.06,0.6,0.05,false,false,true,false,86
+URU,Uruguay,Jose Maria Gimenez,DF,Central defender,82,0.82,0.05,0.5,0.04,false,false,true,false,83
+URU,Uruguay,Rodrigo Bentancur,MF,Progressive midfielder,78,0.78,0.08,0.9,0.06,false,false,false,true,82
+URU,Uruguay,Facundo Pellistri,FW,Wide forward,64,0.56,0.18,1.8,0.15,false,false,false,true,78
+URU,Uruguay,Manuel Ugarte,MF,Ball-winning midfielder,82,0.86,0.04,0.5,0.03,false,false,false,false,83
+URU,Uruguay,Sergio Rochet,GK,Goalkeeper,90,0.88,0.00,0.0,0.00,false,false,false,false,80
+COL,Colombia,Luis Diaz,FW,Primary scorer,84,0.92,0.44,3.0,0.38,false,false,false,true,87
+COL,Colombia,James Rodriguez,MF,Primary creator,74,0.78,0.22,1.8,0.18,true,true,false,true,84
+COL,Colombia,Jhon Arias,MF,Creative midfielder,78,0.80,0.18,1.7,0.14,false,false,false,true,82
+COL,Colombia,Jefferson Lerma,MF,Holding midfielder,82,0.86,0.06,0.7,0.05,false,false,true,false,81
+COL,Colombia,Richard Rios,MF,Progressive midfielder,76,0.74,0.10,1.0,0.08,false,false,false,true,80
+COL,Colombia,Davinson Sanchez,DF,Central defender,86,0.88,0.05,0.5,0.04,false,false,true,false,80
+COL,Colombia,Daniel Munoz,DF,Attacking full-back,82,0.84,0.10,1.0,0.08,false,false,true,true,81
+COL,Colombia,Camilo Vargas,GK,Goalkeeper,90,0.88,0.00,0.0,0.00,false,false,false,false,80
+MEX,Mexico,Santiago Gimenez,FW,Primary scorer,78,0.78,0.46,2.9,0.42,false,false,true,false,82
+MEX,Mexico,Hirving Lozano,FW,Wide forward,76,0.78,0.30,2.3,0.25,false,false,false,true,82
+MEX,Mexico,Edson Alvarez,MF,Holding midfielder,84,0.90,0.07,0.8,0.05,false,false,true,false,82
+MEX,Mexico,Luis Chavez,MF,Set-piece midfielder,78,0.78,0.12,1.3,0.10,false,true,false,true,80
+MEX,Mexico,Orbelin Pineda,MF,Creative midfielder,70,0.66,0.18,1.7,0.14,false,false,false,true,79
+MEX,Mexico,Cesar Montes,DF,Central defender,86,0.88,0.05,0.5,0.04,false,false,true,false,79
+MEX,Mexico,Johan Vasquez,DF,Central defender,82,0.80,0.04,0.4,0.03,false,false,true,false,78
+MEX,Mexico,Guillermo Ochoa,GK,Goalkeeper,88,0.80,0.00,0.0,0.00,false,false,false,false,79
+USA,USA,Christian Pulisic,FW,Primary scorer,82,0.90,0.40,2.7,0.34,true,true,false,true,85
+USA,USA,Gio Reyna,MF,Creative midfielder,68,0.62,0.22,1.8,0.17,false,true,false,true,82
+USA,USA,Weston McKennie,MF,Box-to-box midfielder,82,0.88,0.12,1.3,0.10,false,false,true,true,82
+USA,USA,Tyler Adams,MF,Holding midfielder,70,0.62,0.03,0.4,0.02,false,false,false,false,80
+USA,USA,Yunus Musah,MF,Progressive midfielder,76,0.78,0.06,0.8,0.05,false,false,false,true,80
+USA,USA,Folarin Balogun,FW,Primary scorer,76,0.74,0.38,2.5,0.34,false,false,false,false,81
+USA,USA,Tim Weah,FW,Wide forward,70,0.66,0.20,1.8,0.16,false,false,false,true,79
+USA,USA,Matt Turner,GK,Goalkeeper,90,0.84,0.00,0.0,0.00,false,false,false,false,79
+CAN,Canada,Alphonso Davies,DF,Attacking full-back,88,0.96,0.16,1.6,0.12,false,true,false,true,86
+CAN,Canada,Jonathan David,FW,Primary scorer,84,0.92,0.48,2.8,0.43,true,false,false,false,85
+CAN,Canada,Tajon Buchanan,FW,Wide forward,78,0.82,0.22,1.9,0.18,false,false,false,true,80
+CAN,Canada,Stephen Eustaquio,MF,Set-piece midfielder,82,0.86,0.08,0.9,0.06,false,true,false,true,80
+CAN,Canada,Cyle Larin,FW,Target forward,66,0.60,0.36,2.2,0.31,false,false,true,false,79
+CAN,Canada,Ismael Kone,MF,Progressive midfielder,70,0.64,0.10,1.1,0.08,false,false,false,true,78
+CAN,Canada,Alistair Johnston,DF,Full-back,84,0.86,0.04,0.4,0.03,false,false,true,false,78
+CAN,Canada,Maxime Crepeau,GK,Goalkeeper,88,0.78,0.00,0.0,0.00,false,false,false,false,76
+JPN,Japan,Takefusa Kubo,FW,Primary creator,78,0.84,0.30,2.4,0.25,false,true,false,true,85
+JPN,Japan,Kaoru Mitoma,FW,Wide forward,78,0.84,0.32,2.5,0.27,false,false,false,true,84
+JPN,Japan,Wataru Endo,MF,Holding midfielder,84,0.90,0.05,0.6,0.04,false,false,false,false,82
+JPN,Japan,Daichi Kamada,MF,Creative midfielder,74,0.72,0.20,1.7,0.16,false,false,false,true,81
+JPN,Japan,Takumi Minamino,FW,Second striker,68,0.62,0.34,2.1,0.28,false,false,false,true,80
+JPN,Japan,Ritsu Doan,FW,Wide forward,70,0.66,0.28,2.0,0.23,false,false,false,true,80
+JPN,Japan,Ko Itakura,DF,Central defender,82,0.84,0.05,0.5,0.04,false,false,true,false,80
+JPN,Japan,Zion Suzuki,GK,Goalkeeper,86,0.78,0.00,0.0,0.00,false,false,false,false,77
+KOR,South Korea,Son Heung-min,FW,Primary scorer,86,0.94,0.52,3.1,0.45,true,true,false,true,88
+KOR,South Korea,Kim Min-jae,DF,Defensive leader,90,0.96,0.05,0.5,0.04,false,false,true,false,86
+KOR,South Korea,Lee Kang-in,MF,Creative midfielder,78,0.80,0.20,1.8,0.16,false,true,false,true,82
+KOR,South Korea,Hwang Hee-chan,FW,Wide forward,74,0.74,0.34,2.3,0.29,false,false,false,true,82
+KOR,South Korea,Hwang In-beom,MF,Progressive midfielder,82,0.86,0.08,0.9,0.06,false,false,false,true,80
+KOR,South Korea,Cho Gue-sung,FW,Target forward,62,0.50,0.30,2.0,0.25,false,false,true,false,78
+KOR,South Korea,Lee Jae-sung,MF,Pressing midfielder,70,0.62,0.12,1.2,0.09,false,false,false,true,78
+KOR,South Korea,Jo Hyeon-woo,GK,Goalkeeper,86,0.74,0.00,0.0,0.00,false,false,false,false,76
+SEN,Senegal,Sadio Mane,FW,Primary scorer,82,0.90,0.48,2.8,0.41,true,false,false,true,86
+SEN,Senegal,Nicolas Jackson,FW,Pressing forward,76,0.76,0.40,2.7,0.36,false,false,false,false,82
+SEN,Senegal,Ismaila Sarr,FW,Wide forward,74,0.74,0.28,2.1,0.23,false,false,false,true,80
+SEN,Senegal,Iliman Ndiaye,MF,Creative midfielder,70,0.66,0.22,1.8,0.17,false,false,false,true,80
+SEN,Senegal,Pape Matar Sarr,MF,Box-to-box midfielder,78,0.80,0.09,1.0,0.07,false,false,false,true,80
+SEN,Senegal,Kalidou Koulibaly,DF,Defensive leader,88,0.92,0.05,0.5,0.04,false,false,true,false,83
+SEN,Senegal,Edouard Mendy,GK,Goalkeeper,90,0.84,0.00,0.0,0.00,false,false,false,false,81
+SEN,Senegal,Idrissa Gueye,MF,Ball-winning midfielder,76,0.74,0.04,0.5,0.03,false,false,false,false,79
+NGA,Nigeria,Victor Osimhen,FW,Primary scorer,84,0.92,0.66,3.7,0.60,false,false,true,false,88
+NGA,Nigeria,Ademola Lookman,FW,Wide forward,78,0.82,0.42,2.7,0.36,false,false,false,true,84
+NGA,Nigeria,Samuel Chukwueze,FW,Wide creator,70,0.66,0.26,2.1,0.21,false,false,false,true,80
+NGA,Nigeria,Alex Iwobi,MF,Creative midfielder,78,0.78,0.12,1.2,0.09,false,false,false,true,80
+NGA,Nigeria,Wilfred Ndidi,MF,Holding midfielder,82,0.86,0.04,0.5,0.03,false,false,true,false,80
+NGA,Nigeria,Calvin Bassey,DF,Central defender,84,0.86,0.04,0.4,0.03,false,false,true,false,79
+NGA,Nigeria,William Troost-Ekong,DF,Defensive leader,78,0.72,0.06,0.5,0.04,false,false,true,false,79
+NGA,Nigeria,Stanley Nwabali,GK,Goalkeeper,88,0.78,0.00,0.0,0.00,false,false,false,false,76
+GHA,Ghana,Mohammed Kudus,FW,Primary creator,82,0.88,0.42,2.7,0.36,false,false,false,true,84
+GHA,Ghana,Inaki Williams,FW,Primary scorer,78,0.80,0.36,2.4,0.31,false,false,false,false,81
+GHA,Ghana,Jordan Ayew,FW,Wide forward,74,0.72,0.22,1.7,0.18,true,false,false,true,79
+GHA,Ghana,Thomas Partey,MF,Progressive midfielder,78,0.74,0.08,0.9,0.06,false,false,false,true,82
+GHA,Ghana,Kamaldeen Sulemana,FW,Wide forward,64,0.54,0.22,1.9,0.17,false,false,false,true,78
+GHA,Ghana,Antoine Semenyo,FW,Power forward,68,0.60,0.32,2.2,0.27,false,false,true,false,78
+GHA,Ghana,Daniel Amartey,DF,Central defender,78,0.72,0.04,0.4,0.03,false,false,true,false,77
+GHA,Ghana,Lawrence Ati-Zigi,GK,Goalkeeper,88,0.78,0.00,0.0,0.00,false,false,false,false,75
+EGY,Egypt,Mohamed Salah,FW,Primary scorer,88,0.96,0.64,3.4,0.56,true,true,false,true,90
+EGY,Egypt,Omar Marmoush,FW,Wide forward,80,0.84,0.42,2.8,0.36,false,false,false,true,84
+EGY,Egypt,Mostafa Mohamed,FW,Target forward,74,0.72,0.38,2.4,0.34,false,false,true,false,80
+EGY,Egypt,Trezeguet,FW,Wide forward,72,0.70,0.26,2.0,0.21,false,false,false,true,79
+EGY,Egypt,Mohamed Elneny,MF,Holding midfielder,76,0.70,0.05,0.6,0.04,false,false,false,false,78
+EGY,Egypt,Zizo,MF,Set-piece midfielder,70,0.64,0.22,1.8,0.17,true,true,false,true,78
+EGY,Egypt,Mohamed Abdelmonem,DF,Central defender,84,0.86,0.05,0.5,0.04,false,false,true,false,79
+EGY,Egypt,Mohamed El Shenawy,GK,Goalkeeper,88,0.82,0.00,0.0,0.00,false,false,false,false,79
+NOR,Norway,Erling Haaland,FW,Primary scorer,88,0.97,0.82,4.2,0.76,true,false,true,false,93
+NOR,Norway,Martin Odegaard,MF,Primary creator,86,0.94,0.24,2.1,0.19,false,true,false,true,89
+NOR,Norway,Alexander Sorloth,FW,Target forward,76,0.76,0.46,2.8,0.42,false,false,true,false,83
+NOR,Norway,Oscar Bobb,FW,Wide creator,62,0.50,0.22,1.8,0.17,false,false,false,true,78
+NOR,Norway,Antonio Nusa,FW,Wide forward,60,0.48,0.24,1.9,0.18,false,false,false,true,78
+NOR,Norway,Sander Berge,MF,Holding midfielder,80,0.82,0.08,0.9,0.06,false,false,true,false,80
+NOR,Norway,Leo Ostigard,DF,Central defender,82,0.84,0.06,0.6,0.05,false,false,true,false,79
+NOR,Norway,Orjan Nyland,GK,Goalkeeper,88,0.82,0.00,0.0,0.00,false,false,false,false,78
+TUN,Tunisia,Wahbi Khazri,FW,Attacking forward,68,0.58,0.28,2.0,0.23,true,true,false,true,76
+TUN,Tunisia,Hannibal Mejbri,MF,Creative midfielder,66,0.56,0.10,1.1,0.08,false,false,false,true,76
+TUN,Tunisia,Ellyes Skhiri,MF,Holding midfielder,82,0.86,0.07,0.8,0.05,false,false,true,false,78
+TUN,Tunisia,Bechir Ben Said,GK,Goalkeeper,84,0.72,0.00,0.0,0.00,false,false,false,false,74
+ALG,Algeria,Riyad Mahrez,FW,Primary creator,78,0.78,0.32,2.4,0.27,true,true,false,true,83
+ALG,Algeria,Said Benrahma,FW,Wide forward,70,0.66,0.26,2.0,0.21,false,false,false,true,80
+ALG,Algeria,Ismael Bennacer,MF,Progressive midfielder,80,0.84,0.08,0.9,0.06,false,false,false,true,81
+ALG,Algeria,Ramy Bensebaini,DF,Defensive leader,84,0.86,0.07,0.7,0.06,false,false,true,false,80
+KSA,Saudi Arabia,Salem Al-Dawsari,FW,Primary scorer,82,0.88,0.34,2.4,0.29,true,false,false,true,80
+KSA,Saudi Arabia,Firas Al-Buraikan,FW,Forward,74,0.76,0.28,2.0,0.24,false,false,true,false,77
+KSA,Saudi Arabia,Salman Al-Faraj,MF,Creative midfielder,70,0.62,0.10,1.0,0.08,false,true,false,true,77
+KSA,Saudi Arabia,Mohammed Al-Owais,GK,Goalkeeper,86,0.78,0.00,0.0,0.00,false,false,false,false,76
+QAT,Qatar,Akram Afif,FW,Primary creator,84,0.90,0.34,2.3,0.29,true,true,false,true,81
+QAT,Qatar,Almoez Ali,FW,Primary scorer,82,0.86,0.32,2.2,0.28,false,false,true,false,79
+QAT,Qatar,Hassan Al-Haydos,MF,Creative midfielder,66,0.56,0.14,1.3,0.10,false,true,false,true,76
+QAT,Qatar,Meshaal Barsham,GK,Goalkeeper,86,0.78,0.00,0.0,0.00,false,false,false,false,76
+AUS,Australia,Mathew Leckie,FW,Wide forward,70,0.64,0.20,1.7,0.16,false,false,false,true,77
+AUS,Australia,Craig Goodwin,FW,Set-piece winger,72,0.68,0.22,1.8,0.17,false,true,false,true,78
+AUS,Australia,Jackson Irvine,MF,Box-to-box midfielder,82,0.86,0.10,1.0,0.08,false,false,true,false,78
+AUS,Australia,Mathew Ryan,GK,Goalkeeper,88,0.84,0.00,0.0,0.00,false,false,false,false,79
+SUI,Switzerland,Granit Xhaka,MF,Progressive midfielder,86,0.94,0.10,1.1,0.08,false,true,false,true,85
+SUI,Switzerland,Manuel Akanji,DF,Defensive leader,88,0.92,0.04,0.4,0.03,false,false,true,true,84
+SUI,Switzerland,Breel Embolo,FW,Primary scorer,74,0.70,0.34,2.2,0.30,false,false,true,false,80
+SUI,Switzerland,Gregor Kobel,GK,Goalkeeper,88,0.88,0.00,0.0,0.00,false,false,false,false,84
+DEN,Denmark,Christian Eriksen,MF,Primary creator,76,0.74,0.14,1.4,0.11,false,true,false,true,83
+DEN,Denmark,Rasmus Hojlund,FW,Primary scorer,78,0.80,0.42,2.8,0.38,false,false,true,false,82
+DEN,Denmark,Pierre-Emile Hojbjerg,MF,Holding midfielder,84,0.88,0.08,0.9,0.06,false,false,false,false,81
+DEN,Denmark,Kasper Schmeichel,GK,Goalkeeper,86,0.80,0.00,0.0,0.00,false,false,false,false,79
+SWE,Sweden,Viktor Gyokeres,FW,Primary scorer,84,0.92,0.58,3.4,0.52,true,false,true,false,86
+SWE,Sweden,Alexander Isak,FW,Second striker,82,0.90,0.50,3.0,0.45,false,false,false,true,86
+SWE,Sweden,Dejan Kulusevski,FW,Wide creator,82,0.88,0.24,2.0,0.19,false,false,false,true,84
+SWE,Sweden,Victor Lindelof,DF,Defensive leader,86,0.88,0.04,0.4,0.03,false,false,true,false,80
+SRB,Serbia,Dusan Vlahovic,FW,Primary scorer,78,0.78,0.48,3.0,0.44,true,false,true,false,84
+SRB,Serbia,Aleksandar Mitrovic,FW,Target forward,76,0.76,0.52,3.1,0.47,true,false,true,false,83
+SRB,Serbia,Sergej Milinkovic-Savic,MF,Creative midfielder,82,0.86,0.20,1.8,0.16,false,false,true,true,84
+SRB,Serbia,Nikola Milenkovic,DF,Central defender,86,0.88,0.05,0.5,0.04,false,false,true,false,80
+POL,Poland,Robert Lewandowski,FW,Primary scorer,84,0.92,0.62,3.5,0.56,true,false,true,false,88
+POL,Poland,Piotr Zielinski,MF,Creative midfielder,82,0.86,0.18,1.6,0.14,false,true,false,true,83
+POL,Poland,Nicola Zalewski,MF,Wide creator,74,0.70,0.10,1.1,0.08,false,false,false,true,79
+POL,Poland,Wojciech Szczesny,GK,Goalkeeper,88,0.86,0.00,0.0,0.00,false,false,false,false,83
+AUT,Austria,David Alaba,DF,Set-piece defender,74,0.66,0.08,0.8,0.06,false,true,true,true,84
+AUT,Austria,Marcel Sabitzer,MF,Creative midfielder,82,0.88,0.20,1.8,0.15,false,true,false,true,83
+AUT,Austria,Marko Arnautovic,FW,Forward,66,0.56,0.32,2.0,0.28,true,false,true,false,79
+AUT,Austria,Christoph Baumgartner,MF,Attacking midfielder,78,0.80,0.24,1.9,0.18,false,false,false,true,81
+TUR,Turkey,Hakan Calhanoglu,MF,Primary creator,84,0.90,0.18,1.7,0.14,true,true,false,true,85
+TUR,Turkey,Arda Guler,MF,Creative midfielder,68,0.62,0.24,1.9,0.18,false,true,false,true,83
+TUR,Turkey,Kerem Akturkoglu,FW,Wide forward,76,0.76,0.28,2.1,0.23,false,false,false,true,80
+TUR,Turkey,Caglar Soyuncu,DF,Central defender,78,0.72,0.05,0.5,0.04,false,false,true,false,78
+WAL,Wales,Brennan Johnson,FW,Wide forward,78,0.82,0.28,2.1,0.23,false,false,false,true,80
+WAL,Wales,Harry Wilson,MF,Set-piece creator,76,0.78,0.20,1.7,0.15,false,true,false,true,79
+WAL,Wales,Ben Davies,DF,Defensive leader,84,0.86,0.04,0.4,0.03,false,false,true,false,78
+WAL,Wales,Danny Ward,GK,Goalkeeper,84,0.76,0.00,0.0,0.00,false,false,false,false,75
+SCO,Scotland,Scott McTominay,MF,Box-crashing midfielder,84,0.90,0.28,1.9,0.22,false,false,true,false,81
+SCO,Scotland,John McGinn,MF,Creative midfielder,82,0.88,0.16,1.5,0.12,false,false,false,true,80
+SCO,Scotland,Andy Robertson,DF,Attacking full-back,88,0.94,0.05,0.6,0.04,false,true,false,true,83
+SCO,Scotland,Angus Gunn,GK,Goalkeeper,86,0.80,0.00,0.0,0.00,false,false,false,false,77
+CHI,Chile,Alexis Sanchez,FW,Primary creator,72,0.68,0.28,2.1,0.23,true,true,false,true,80
+CHI,Chile,Ben Brereton Diaz,FW,Primary scorer,78,0.80,0.34,2.4,0.30,false,false,true,false,80
+CHI,Chile,Erick Pulgar,MF,Holding midfielder,82,0.86,0.08,0.8,0.06,false,false,true,false,78
+CHI,Chile,Claudio Bravo,GK,Goalkeeper,80,0.70,0.00,0.0,0.00,false,false,false,false,78
+ECU,Ecuador,Moises Caicedo,MF,Progressive midfielder,88,0.96,0.08,0.9,0.06,false,false,false,true,85
+ECU,Ecuador,Pervis Estupinan,DF,Attacking full-back,84,0.88,0.07,0.8,0.05,false,false,false,true,82
+ECU,Ecuador,Enner Valencia,FW,Primary scorer,76,0.74,0.38,2.3,0.33,true,false,true,false,80
+ECU,Ecuador,Willian Pacho,DF,Central defender,84,0.86,0.04,0.4,0.03,false,false,true,false,80
+PAR,Paraguay,Miguel Almiron,MF,Primary creator,82,0.88,0.22,1.9,0.17,false,false,false,true,81
+PAR,Paraguay,Julio Enciso,FW,Wide forward,70,0.66,0.28,2.1,0.23,false,false,false,true,80
+PAR,Paraguay,Gustavo Gomez,DF,Defensive leader,86,0.88,0.06,0.6,0.05,false,false,true,false,80
+PAR,Paraguay,Roberto Fernandez,GK,Goalkeeper,84,0.76,0.00,0.0,0.00,false,false,false,false,75
+PER,Peru,Paolo Guerrero,FW,Target forward,58,0.42,0.30,2.0,0.25,true,false,true,false,77
+PER,Peru,Andre Carrillo,FW,Wide forward,72,0.68,0.22,1.8,0.17,false,false,false,true,78
+PER,Peru,Renato Tapia,MF,Holding midfielder,82,0.86,0.06,0.7,0.05,false,false,true,false,78
+PER,Peru,Pedro Gallese,GK,Goalkeeper,88,0.84,0.00,0.0,0.00,false,false,false,false,78
+CMR,Cameroon,Andre-Frank Zambo Anguissa,MF,Progressive midfielder,84,0.90,0.12,1.2,0.09,false,false,true,true,82
+CMR,Cameroon,Vincent Aboubakar,FW,Primary scorer,68,0.58,0.40,2.5,0.35,true,false,true,false,80
+CMR,Cameroon,Bryan Mbeumo,FW,Wide forward,80,0.86,0.34,2.4,0.29,false,false,false,true,83
+CMR,Cameroon,Andre Onana,GK,Goalkeeper,88,0.88,0.00,0.0,0.00,false,false,false,false,83
+CIV,Ivory Coast,Sebastien Haller,FW,Primary scorer,72,0.70,0.42,2.6,0.37,false,false,true,false,81
+CIV,Ivory Coast,Simon Adingra,FW,Wide forward,74,0.72,0.26,2.0,0.21,false,false,false,true,80
+CIV,Ivory Coast,Franck Kessie,MF,Penalty midfielder,84,0.90,0.18,1.5,0.12,true,false,true,false,82
+CIV,Ivory Coast,Yahia Fofana,GK,Goalkeeper,86,0.78,0.00,0.0,0.00,false,false,false,false,76
+RSA,South Africa,Percy Tau,FW,Primary creator,78,0.82,0.28,2.0,0.23,true,false,false,true,78
+RSA,South Africa,Themba Zwane,MF,Creative midfielder,72,0.66,0.18,1.5,0.12,false,false,false,true,77
+RSA,South Africa,Teboho Mokoena,MF,Set-piece midfielder,84,0.88,0.10,1.0,0.08,false,true,false,true,78
+RSA,South Africa,Ronwen Williams,GK,Goalkeeper,88,0.84,0.00,0.0,0.00,false,false,false,false,78
+CRC,Costa Rica,Joel Campbell,FW,Primary scorer,76,0.78,0.24,1.8,0.19,true,false,false,true,76
+CRC,Costa Rica,Manfred Ugalde,FW,Forward,72,0.70,0.28,2.0,0.23,false,false,false,false,77
+CRC,Costa Rica,Francisco Calvo,DF,Defensive leader,84,0.86,0.04,0.4,0.03,false,false,true,false,75
+CRC,Costa Rica,Keylor Navas,GK,Goalkeeper,86,0.80,0.00,0.0,0.00,false,false,false,false,81
+PAN,Panama,Michael Murillo,DF,Attacking full-back,84,0.88,0.06,0.7,0.05,false,false,false,true,76
+PAN,Panama,Jose Fajardo,FW,Primary scorer,74,0.72,0.30,2.0,0.26,false,false,true,false,75
+PAN,Panama,Adalberto Carrasquilla,MF,Creative midfielder,82,0.86,0.12,1.2,0.09,false,true,false,true,77
+PAN,Panama,Orlando Mosquera,GK,Goalkeeper,84,0.76,0.00,0.0,0.00,false,false,false,false,74
+NZL,New Zealand,Chris Wood,FW,Primary scorer,82,0.90,0.42,2.5,0.37,true,false,true,false,79
+NZL,New Zealand,Sarpreet Singh,MF,Creative midfielder,72,0.68,0.16,1.4,0.12,false,true,false,true,76
+NZL,New Zealand,Joe Bell,MF,Holding midfielder,80,0.82,0.06,0.7,0.05,false,false,false,false,75
+NZL,New Zealand,Max Crocombe,GK,Goalkeeper,84,0.78,0.00,0.0,0.00,false,false,false,false,74

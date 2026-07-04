@@ -1,0 +1,52 @@
+services:
+  # Local development only. Production runs the frontend on Vercel,
+  # PostgreSQL on Neon or Supabase, and the FastAPI container on a backend host.
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: scouts_edge
+      POSTGRES_USER: scout
+      POSTGRES_PASSWORD: scout
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U scout -d scouts_edge"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://scout:scout@postgres:5432/scouts_edge
+      ENVIRONMENT: development
+      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+      FOOTBALL_DATA_PROVIDER: mock
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+    environment:
+      # In Docker Compose, server-rendered Next.js pages call the backend by
+      # service name. In Vercel, set this to the public backend URL instead.
+      NEXT_PUBLIC_API_BASE_URL: http://backend:8000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
