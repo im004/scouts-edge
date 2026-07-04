@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Trophy, Loader2, Play, Medal } from "lucide-react";
 import type { SingleTournamentRun } from "@/types/api";
-import { api } from "@/lib/api";
+import { ApiRequestError, api } from "@/lib/api";
 
 export function SingleTournamentSimulation() {
   const [seed, setSeed] = useState("");
@@ -21,7 +21,11 @@ export function SingleTournamentSimulation() {
       }
       setResult(await api.runSingleTournament(parsedSeed));
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Simulation failed.");
+      if (err instanceof ApiRequestError) {
+        setError(err.message);
+      } else {
+        setError(err instanceof Error ? err.message : "Simulation failed.");
+      }
     } finally {
       setIsLoading(false);
     }

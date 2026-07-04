@@ -1,11 +1,74 @@
 import type { GoalTypePrediction, Match, MatchPrediction, PlayerProfile, ScorerCandidate, ShotMapResponse, SingleTournamentRun, Team, TournamentSimulation } from "@/types/api";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+const DEFAULT_CLIENT_API_BASE_URL = "http://localhost:8000";
 
-async function getJson<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE}${path}`, { ...init, cache: "no-store" });
+export class ApiRequestError extends Error {
+  constructor(
+    message: string,
+    public readonly url: string,
+    public readonly method: string,
+    public readonly status?: number,
+    public readonly backendMessage?: string
+  ) {
+    super(message);
+    this.name = "ApiRequestError";
+  }
+}
+
+export function getClientApiBaseUrl(): string {
+  return process.env.NEXT_PUBLIC_API_BASE_URL ?? DEFAULT_CLIENT_API_BASE_URL;
+}
+
+export function getServerApiBaseUrl(): string {
+  return process.env.BACKEND_INTERNAL_URL ?? process.env.NEXT_PUBLIC_API_BASE_URL ?? DEFAULT_CLIENT_API_BASE_URL;
+}
+
+function getApiBaseUrl(): string {
+  return typeof window === "undefined" ? getServerApiBaseUrl() : getClientApiBaseUrl();
+}
+
+async function readBackendMessage(response: Response): Promise<string | undefined> {
+  const contentType = response.headers.get("content-type") ?? "";
+  try {
+    if (contentType.includes("application/json")) {
+      const payload = (await response.json()) as { detail?: unknown; message?: unknown; error?: unknown };
+      const detail = payload.detail ?? payload.message ?? payload.error;
+      return typeof detail === "string" ? detail : detail ? JSON.stringify(detail) : undefined;
+    }
+    const text = await response.text();
+    return text || undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+async function getJson<T>(path: string, init?: RequestInit & { useClientBase?: boolean }): Promise<T> {
+  const { useClientBase, ...fetchInit } = init ?? {};
+  const baseUrl = useClientBase ? getClientApiBaseUrl() : getApiBaseUrl();
+  const url = `${baseUrl}${path}`;
+  const method = fetchInit.method ?? "GET";
+  let response: Response;
+  try {
+    response = await fetch(url, { ...fetchInit, cache: "no-store" });
+  } catch (error) {
+    if (error instanceof Error && error.message.includes("Dynamic server usage")) {
+      throw error;
+    }
+    throw new ApiRequestError(
+      `Simulation request failed: ${method} ${url} could not reach the backend${error instanceof Error ? `: ${error.message}` : ""}`,
+      url,
+      method
+    );
+  }
   if (!response.ok) {
-    throw new Error(`API request failed: ${path}`);
+    const backendMessage = await readBackendMessage(response);
+    throw new ApiRequestError(
+      `Simulation request failed: ${method} ${url} returned ${response.status}${backendMessage ? `: ${backendMessage}` : ""}`,
+      url,
+      method,
+      response.status,
+      backendMessage
+    );
   }
   return response.json() as Promise<T>;
 }
@@ -33,6 +96,7 @@ export const api = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ seed, include_awards: true }),
+      useClientBase: true,
     }),
   tournamentGroups: () => getJson<{ groups: Record<string, Team[]> }>("/tournament/groups"),
   tournamentFixtures: () => getJson<{ fixtures: Record<string, unknown>[]; fixture_count: number }>("/tournament/fixtures"),

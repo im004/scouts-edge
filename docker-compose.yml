@@ -23,7 +23,7 @@ services:
     environment:
       DATABASE_URL: postgresql+psycopg://scout:scout@postgres:5432/scouts_edge
       ENVIRONMENT: development
-      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+      CORS_ORIGINS: http://localhost:3000,http://localhost:3001,http://127.0.0.1:3000,http://127.0.0.1:3001
       FOOTBALL_DATA_PROVIDER: mock
     ports:
       - "8000:8000"
@@ -37,9 +37,10 @@ services:
     build:
       context: ./frontend
     environment:
-      # In Docker Compose, server-rendered Next.js pages call the backend by
-      # service name. In Vercel, set this to the public backend URL instead.
-      NEXT_PUBLIC_API_BASE_URL: http://backend:8000
+      # Browser/client components need a URL that the user's browser can reach.
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8000
+      # Server-rendered Next.js pages can use the Docker service name internally.
+      BACKEND_INTERNAL_URL: http://backend:8000
     ports:
       - "3000:3000"
     volumes:
