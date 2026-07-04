@@ -1,13 +1,13 @@
 # Architecture
 
-The Scout's Edge is an automated football analytics pipeline that ingests match and event data, computes tactical and predictive metrics, and presents scouting-style insights through a full-stack dashboard.
+The Scout's Edge is a deployed full-stack football analytics platform. The public dashboard runs on Vercel, the FastAPI backend runs on Render, and PostgreSQL is hosted on Neon. Local development uses Docker Compose for PostgreSQL plus local FastAPI and Next.js dev servers.
 
 ## System Overview
 
 ```mermaid
 flowchart LR
   Provider["Football data providers / demo seed"] --> Ingestion["Ingestion adapters"]
-  Ingestion --> DB["PostgreSQL local / Neon / Supabase"]
+  Ingestion --> DB["PostgreSQL local / Neon"]
   DB --> Analytics["Analytics engine"]
   DB --> Predictions["Prediction engine"]
   Analytics --> API["FastAPI Docker service"]
@@ -15,6 +15,36 @@ flowchart LR
   API --> Dashboard["Next.js dashboard on Vercel"]
   API --> Reports["Rule-based reports"]
 ```
+
+## Production Architecture
+
+```text
+User Browser
+  -> Vercel Next.js Frontend
+  -> Render FastAPI Backend
+  -> Neon PostgreSQL
+```
+
+```mermaid
+flowchart LR
+  User["User Browser"] --> Frontend["Vercel Next.js / TypeScript frontend"]
+  Frontend --> Backend["Render FastAPI backend"]
+  Backend --> Database["Neon PostgreSQL"]
+  Backend --> DemoData["Demo tournament/player seed data"]
+```
+
+The deployed frontend uses `NEXT_PUBLIC_API_BASE_URL=https://scouts-edge.onrender.com`. The Render backend uses `DATABASE_URL` for Neon and `CORS_ORIGINS` for the Vercel production URL plus local development origins.
+
+## Local Architecture
+
+```text
+User Browser
+  -> Next.js dev server
+  -> FastAPI dev server
+  -> Docker PostgreSQL
+```
+
+Docker Compose is local-only. It is not deployed to Vercel.
 
 ## Backend Architecture
 
@@ -29,7 +59,7 @@ The backend is a FastAPI application with small service modules:
 
 ## Frontend Architecture
 
-The frontend is a Next.js app router dashboard. Server components fetch backend API data for the main pages. Client components are used only where interactivity or charts are needed, such as Recharts and shot-map rendering.
+The frontend is a Next.js app router dashboard. Server components fetch backend API data for the main pages. Client components are used where interactivity or charts are needed, including Recharts, shot-map rendering and the single-run tournament simulation button.
 
 ## Database Design
 
@@ -90,13 +120,13 @@ n8n can later orchestrate scheduled ingestion, report generation and notificatio
 
 Local development uses Docker Compose for PostgreSQL, FastAPI and Next.js. Production should not try to deploy Docker Compose directly to Vercel.
 
-The intended production architecture is:
+The deployed production architecture is:
 
 - Next.js dashboard on Vercel.
-- PostgreSQL on Neon Postgres or Supabase Postgres.
-- FastAPI backend deployed as a Docker-compatible service on Render, Railway, Fly.io, or a VPS.
+- PostgreSQL on Neon Postgres.
+- FastAPI backend deployed as a Docker-compatible service on Render.
 - `NEXT_PUBLIC_API_BASE_URL` in Vercel points at the hosted FastAPI URL.
-- `DATABASE_URL` in the backend host points at Neon or Supabase.
+- `DATABASE_URL` in Render points at Neon.
 - `CORS_ORIGINS` in the backend host includes the Vercel dashboard domain.
 
 Future production hardening should add object storage for raw event files, migration execution in CI/CD, observability, and provider-specific deployment manifests.

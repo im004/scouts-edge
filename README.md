@@ -1,8 +1,18 @@
 # The Scout's Edge
 
-The Scout's Edge is a full-stack football analytics and tournament simulation platform built with FastAPI, PostgreSQL, Next.js, TypeScript and Docker. It combines match analytics, transparent forecasting, 48-team tournament simulation, named player profiles and player-level awards simulation in a production-style graduate software/data engineering portfolio project.
+The Scout's Edge is a deployed full-stack football analytics and tournament simulation platform. It pairs a FastAPI backend with a PostgreSQL database hosted on Neon, a Next.js/TypeScript frontend hosted on Vercel, and a Docker-based local development workflow. The backend is deployed on Render, GitHub Actions runs automated checks, and the public dashboard demonstrates match analytics, tactical previews, production-style empty states, Monte Carlo tournament probabilities, single-run tournament path simulation, Golden Boot and Tournament MVP modelling, and real/named demo player profiles.
 
-This is a production-style MVP for a graduate software engineering, backend engineering and data engineering portfolio. It is intentionally not a gambling product: predictions are probabilistic football analytics, educational modelling and transparent simulation.
+This is a production-style graduate software engineering, backend engineering and data engineering portfolio project. It is intentionally not a gambling product: predictions are probabilistic football analytics, educational modelling and transparent simulation.
+
+## Live Demo
+
+Frontend: https://scouts-edge.vercel.app  
+Tournament simulation: https://scouts-edge.vercel.app/tournament  
+Backend API: https://scouts-edge.onrender.com  
+API health: https://scouts-edge.onrender.com/health  
+API docs: https://scouts-edge.onrender.com/docs  
+
+Note: The backend/database are hosted on free-tier infrastructure, so the first request may take a few seconds to wake up.
 
 ## Screenshots
 
@@ -39,6 +49,24 @@ Football data is noisy and spread across providers. This project shows how to no
 
 See [docs/architecture.md](docs/architecture.md).
 
+Production:
+
+```text
+User Browser
+  -> Vercel Next.js Frontend
+  -> Render FastAPI Backend
+  -> Neon PostgreSQL
+```
+
+Local development:
+
+```text
+User Browser
+  -> Next.js dev server
+  -> FastAPI dev server
+  -> Docker PostgreSQL
+```
+
 ## Tech Stack
 
 - Backend: Python 3.11, FastAPI, SQLAlchemy 2.x, Alembic, Pydantic, Pandas/NumPy-ready services, pytest.
@@ -65,17 +93,40 @@ The dashboard runs at `http://localhost:3000` and the API at `http://localhost:8
 
 Docker Compose is for local development only. It is not the production deployment architecture.
 
-## Deployment
+## Production Deployment
 
-The intended production split is:
+The live production split is:
 
-- Frontend dashboard: deploy `frontend/` to Vercel.
-- PostgreSQL database: use Neon Postgres or Supabase Postgres.
-- FastAPI backend: keep `backend/` Docker-compatible and deploy it to Render, Railway, Fly.io, or a VPS.
+- Frontend dashboard: Vercel hosts `frontend/`.
+- Backend API: Render hosts the Docker-compatible FastAPI service from `backend/`.
+- Database: Neon hosts PostgreSQL.
 
-Set `NEXT_PUBLIC_API_BASE_URL` in Vercel to the public FastAPI backend URL. Set `DATABASE_URL` on the backend host to the hosted Postgres connection string. Set `CORS_ORIGINS` on the backend host to include the Vercel dashboard domain.
+Render environment variables include `DATABASE_URL` and `CORS_ORIGINS`. Vercel environment variables include `NEXT_PUBLIC_API_BASE_URL`. Docker Compose is local-only and is not the production deployment setup.
 
 See [docs/deployment.md](docs/deployment.md).
+
+## CI/CD
+
+- GitHub Actions runs backend tests, backend Ruff lint checks and the frontend production build.
+- Vercel automatically deploys frontend changes from GitHub.
+- Render deploys backend changes from GitHub.
+- Deployment configuration uses environment variables instead of committed secrets.
+
+## Security and Secrets
+
+- No API keys or database URLs should be committed.
+- `DATABASE_URL` lives only in Render environment variables.
+- `NEXT_PUBLIC_API_BASE_URL` is safe to expose because it only points to the public API.
+- CORS is restricted to local development origins and the Vercel production URL.
+- The app is a public portfolio demo and does not store user accounts or sensitive user data.
+- Future hardening could include rate limiting, auth for admin routes, stricter CORS per environment, and disabling public docs in production.
+
+## Operational Notes
+
+- Closing the browser or laptop does not stop the hosted deployment.
+- Free-tier infrastructure may sleep and wake on the first request.
+- New commits to `main` trigger redeploys depending on Vercel and Render project settings.
+- The hosted database needs migrations and seed data when reset or recreated.
 
 ## API Overview
 
@@ -128,6 +179,28 @@ make test
 
 Tests cover analytics calculations, prediction probability shape, tournament simulation output, scorer predictions, goal-type predictions and the health endpoint.
 
+## Recruiter Quick Start
+
+- Live demo: https://scouts-edge.vercel.app
+- API docs: https://scouts-edge.onrender.com/docs
+- Local setup:
+
+```bash
+cp .env.example .env
+make docker-up
+```
+
+- Tests:
+
+```bash
+cd backend
+.venv/bin/python -m pytest
+.venv/bin/ruff check app
+
+cd ../frontend
+npm run build
+```
+
 ## Limitations
 
 - The MVP uses a seeded 48-team demo tournament dataset, not official FIFA fixture data.
@@ -164,6 +237,21 @@ Tests cover analytics calculations, prediction probability shape, tournament sim
 - Dashboard shows full tournament stage probabilities.
 - Match detail pages have scheduled-match empty states.
 - Shot map explains missing event data.
+
+## Portfolio Value / Engineering Highlights
+
+- Full-stack monorepo with clear backend/frontend boundaries.
+- Typed frontend built with Next.js, TypeScript and reusable dashboard components.
+- REST API design using FastAPI route modules and Pydantic schemas.
+- Relational data modelling for teams, players, matches, events, predictions and reports.
+- Deterministic analytics for shot maps, possession chains, set pieces and tactical summaries.
+- Monte Carlo simulation for 48-team tournament stage probabilities.
+- Single-run tournament simulation for one complete bracket path and final score.
+- Player-level awards modelling for scorer candidates, Golden Boot and Tournament MVP.
+- CORS/debugging fix separating browser-safe API URLs from Docker/server-only URLs.
+- Deployment across Vercel, Render and Neon.
+- GitHub Actions CI checks for backend tests/lint and frontend build.
+- Docker Compose local setup for repeatable development.
 
 ## What I Learned
 

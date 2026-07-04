@@ -18,11 +18,13 @@ Each team has manually editable or provider-derived inputs:
 
 ## Match Expected Goals
 
-The MVP combines team attack strength, opponent defence strength and recent form into expected goals. The formula is deliberately simple so engineers and recruiters can inspect it.
+The model combines team attack strength, opponent defence strength and recent form into expected goals. The formula is deliberately simple so engineers and recruiters can inspect it.
 
-## Poisson Scoreline Model
+## Poisson-Style Baseline
 
 Expected goals are converted into a grid of scoreline probabilities from 0-0 to 5-5. The grid produces team A win, draw and team B win probabilities plus the most likely scorelines.
+
+This is a transparent Poisson-style baseline, not a calibrated professional forecasting model. It is designed to make assumptions inspectable while still supporting match predictions, Monte Carlo tournament probabilities and single-run tournament paths.
 
 ## Tournament Simulation
 
@@ -37,7 +39,7 @@ The tournament model now runs the full 48-team demo format many times:
 
 Each group match samples goals from the expected-goals model. Knockout draws are resolved with a penalty-style decisive probability derived from the match prediction model. This is documented as a transparent MVP approximation, not an exact recreation of FIFA bracket policy.
 
-## Scorer Candidate Model
+## Player Scorer Weighting
 
 Scorer estimates use:
 
@@ -63,7 +65,11 @@ The single-run tournament simulator assigns goals in every simulated match from 
 - attacking position;
 - aerial/set-piece target profile for defenders and set-piece situations.
 
-The Golden Boot is awarded to the player with the most simulated goals. Ties are resolved by assists, then fewer minutes, then the stage reached by the player's team.
+The Golden Boot is awarded to the player with the most simulated goals. Ties are resolved by:
+
+1. assists;
+2. fewer minutes;
+3. team stage reached.
 
 ## Tournament MVP Logic
 
@@ -84,4 +90,4 @@ Open-play, set-piece, penalty and counterattack estimates use team threat scores
 
 ## Limitations
 
-The demo seed data is illustrative and is labelled as a demo tournament dataset for engineering purposes, not official FIFA fixture data. It does not include live injuries, tactical lineup changes, travel disruption, private training data, referee assignments or full historical calibration. Future versions should add model calibration, backtesting, richer event parsing, confidence intervals and exact official bracket mapping.
+The demo seed data is illustrative and is labelled as a demo tournament dataset for engineering purposes, not official FIFA fixture data. It does not include live injuries, tactical lineup changes, travel disruption, private training data, referee assignments, betting-market calibration or full historical calibration. Future versions should add model calibration, backtesting, richer event parsing, confidence intervals, exact official bracket mapping and richer defensive/goalkeeper award modelling.

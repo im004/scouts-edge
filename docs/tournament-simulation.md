@@ -60,7 +60,7 @@ If a knockout match is drawn after normal-time simulation, it is resolved with a
 
 ## Monte Carlo Output
 
-The simulator runs 100 to 10,000 tournament runs. The default is 1,000.
+The probability forecast on `/tournament` uses Monte Carlo simulation. The simulator runs 100 to 10,000 tournament runs. The default is 1,000.
 
 For every team it outputs:
 
@@ -81,14 +81,17 @@ No team is given a forced 100% quarter-final probability in full-tournament mode
 
 Monte Carlo forecasting answers: "How often does each team reach each stage across many runs?"
 
-The single-run simulator answers a different product question: "What could one complete tournament path look like?" The `POST /tournament/simulate/run` endpoint returns exactly one simulated tournament with:
+The "Run Tournament Simulation" button answers a different product question: "What could one complete tournament path look like?" The client calls `POST /tournament/simulate/run`, and the endpoint returns exactly one simulated tournament with:
 
-- one winner and runner-up;
+- tournament winner;
+- runner-up;
 - final score and normal-time or penalties decision state;
 - semi-finalists;
 - simulated group tables and third-place ranking;
-- full knockout path from Round of 32 to final;
-- top scorers, Golden Boot and tournament MVP.
+- full knockout bracket path from Round of 32 to final;
+- top scorers;
+- Golden Boot;
+- Tournament MVP.
 
 An optional seed makes the run deterministic for demos, tests and screenshots. The same seed returns the same winner, final and player-award ordering. Without a seed, the API generates a new one and returns it with the response.
 

@@ -1,6 +1,6 @@
 # Data Model
 
-The schema is designed around normalized football entities and JSON payload columns for calculated metrics.
+The schema is designed around normalized football entities and JSON payload columns for calculated metrics. In production, PostgreSQL is hosted on Neon; local development can use Docker PostgreSQL through Docker Compose.
 
 ## Core Tables
 
